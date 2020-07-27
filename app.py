@@ -11,7 +11,7 @@ urls = (
     '/', 'index',
     '/posts/(.+)', 'post',
 )
-app = web.application(urls, globals())
+app = web.application(urls, globals()).wsgifunc()
 
 post_dir = '_posts'
 
